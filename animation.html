@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style type="text/css">
+        div {
+            align-items: center;
+            justify-content: center;
+            background: blue;
+        }
+
+        .dots {
+            display: flex;
+        }
+
+        .child {
+            width: 60px;
+            height: 55px;
+            background: red;
+            border-radius: 50%;
+            margin-left: 15px;
+            animation: up-and-down 1s infinite ease-in-out alternate;
+        }
+
+        .child div:nth-child(1) {
+            animation-delay: -0.4s;
+        }
+
+        .child div:nth-child(2) {
+            animation-delay: -0.2s;
+        }
+
+        @keyframes up-and-down {
+            0% {
+                transform: translateY(0x);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="dots">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+
+</body>
+</html>
