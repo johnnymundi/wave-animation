@@ -6,40 +6,53 @@
 
     <style type="text/css">
         div {
-            align-items: center;
-            justify-content: center;
-            background: blue;
-        }
+  align-items: center;
+  justify-content: center;
+}
 
-        .dots {
-            display: flex;
-        }
+.dots {
+  display: flex;
+}
 
-        .child {
-            width: 60px;
-            height: 55px;
-            background: red;
-            border-radius: 50%;
-            margin-left: 15px;
-            animation: up-and-down 1s infinite ease-in-out alternate;
-        }
+.child {
+  width: 60px;
+  height: 55px;
+  background: #ff9900;
+  border-radius: 50%;
+  margin-left: 15px;
+  animation: up-and-down 1s infinite ease-in-out alternate;
+}
 
-        .child div:nth-child(1) {
-            animation-delay: -0.4s;
-        }
+/* nth-child especifica a partir de qual filho; */
+.dots div:nth-child(1) {
+  animation-delay: -0.5s;
+}
 
-        .child div:nth-child(2) {
-            animation-delay: -0.2s;
-        }
+.dots div:nth-child(2) {
+  animation-delay: -0.4s;
+}
 
-        @keyframes up-and-down {
-            0% {
-                transform: translateY(0x);
-            }
-            100% {
-                transform: translateY(100%);
-            }
-        }
+.dots div:nth-child(3) {
+  animation-delay: -0.3s;
+}
+
+.dots div:nth-child(4) {
+  animation-delay: -0.2s;
+}
+
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0x);
+    }
+  50% {
+    transform: translateY(25%);
+    background: rgb(209, 204, 204);
+  }
+  100% {
+    transform: translateY(100%);
+    background: blue;
+    }
+}
 
     </style>
 </head>
